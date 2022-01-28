@@ -2,6 +2,7 @@ const { createUser } = require("../service/user.service");
 
 class USerController {
   async reqister(ctx, next) {
+    // 获取数据
     const {user_name,password} = ctx.request.body;
     // 操作数据库
     const res = await createUser(user_name,password);
