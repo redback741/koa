@@ -8,11 +8,9 @@ class USerController {
     const res = await createUser(user_name,password);
     // 返回结果
     ctx.body =res;
-
   }
 
   async login(ctx, next) {
-    
     ctx.body = '用户登录';
   }
 }

@@ -12,10 +12,10 @@ const seq = new Sequelize(MYSQL_DB,MYSQL_USER,MYSQL_PWD, {
   dialect: "mysql"
 });
 
-  seq.authenticate().then(() => {
-    console.log("连接成功");
-  }).catch(err => {
-    console.log("连接失败");
-  });
+  // seq.authenticate().then(() => {
+  //   console.log("连接成功");
+  // }).catch(err => {
+  //   console.log("连接失败");
+  // });
 
   module.exports = seq;
