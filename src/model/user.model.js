@@ -1,4 +1,4 @@
-const { Sequeliize, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
 const seq = require("../db/seq");
 // 创建模型
@@ -20,7 +20,7 @@ const User = seq.define('zd_user', {
     allowNull: false,
     defaultValue: 0,
     comment: '是否是管理员， 0：不是管理员'
-  }
+  } 
 });
 
 
