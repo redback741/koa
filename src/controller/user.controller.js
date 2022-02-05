@@ -5,27 +5,27 @@ class USerController {
     // 获取数据
     const {user_name,password} = ctx.request.body;
 
-    if (!user_name || !password) {
-      console.error('用户名或密码为空', ctx.request.body)
-      ctx.status= 400;
-      ctx.body = {
-        code: '10001',
-        message: '用户名或密码为空',
-        result: ''
-      }
-      return
-    }
+    // if (!user_name || !password) {
+    //   console.error('用户名或密码为空', ctx.request.body)
+    //   ctx.status= 400;
+    //   ctx.body = {
+    //     code: '10001',
+    //     message: '用户名或密码为空',
+    //     result: ''
+    //   }
+    //   return
+    // }
 
     // 查询注册用户是否存在
-    if(getUserInfo({user_name})) {
-      ctx.status= 409;
-      ctx.body = {
-        code: '10002',
-        message: '用户名已存在',
-        result: ''
-      }
-      return
-    }
+    // if(getUserInfo({user_name})) {
+    //   ctx.status= 409;
+    //   ctx.body = {
+    //     code: '10002',
+    //     message: '用户名已存在',
+    //     result: ''
+    //   }
+    //   return
+    // }
 
     // 操作数据库
     const res = await createUser(user_name,password);
