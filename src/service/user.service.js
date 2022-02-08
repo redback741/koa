@@ -6,7 +6,6 @@ class UserService {
 
     // 插入数据
     const res = await User.create({user_name,password});
-
     return res.dataValues;
   }
     // 查询数据
